@@ -1,4 +1,4 @@
-const WS_BASE = "https://lochal.workers.dev";
+const WS_BASE = "https://lochal.lochal.workers.dev";
 
 const $ = (id) => document.getElementById(id);
 const login = $("login"), chat = $("chat");
