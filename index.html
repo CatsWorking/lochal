@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>classroom://chat</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="terminal">
+    <header>
+      <div class="traffic"><span></span><span></span><span></span></div>
+      <div class="title">classroom://chat</div>
+    </header>
+
+    <section id="login" class="screen">
+      <div class="prompt">classroom@chat:~$ <span>./login</span></div>
+      <p>Welcome to classroom chat.</p>
+      <form id="loginForm">
+        <label>username</label>
+        <input id="username" maxlength="20" autocomplete="off" required
+               pattern="[A-Za-z0-9_-]{2,20}"
+               title="2-20 characters: letters, numbers, _ or -">
+        <label>name color <small>(optional)</small></label>
+        <input id="nameColor" type="color" value="#66ff99">
+        <label>room</label>
+        <input id="room" maxlength="32" value="classroom" autocomplete="off"
+               pattern="[A-Za-z0-9_-]{1,32}" required>
+        <button type="submit">[ ENTER CHAT ]</button>
+        <div id="loginError" class="error"></div>
+      </form>
+      <p class="hint">No account required. Usernames are unique while active in a room.</p>
+    </section>
+
+    <section id="chat" class="screen hidden">
+      <div class="status">
+        <span id="connection">[ CONNECTING ]</span>
+        <span id="roomLabel"></span>
+        <button id="leave">[ LEAVE ]</button>
+      </div>
+      <div id="messages" class="messages" aria-live="polite"></div>
+      <form id="messageForm" class="composer">
+        <span class="prompt">chat&gt;</span>
+        <input id="message" maxlength="500" autocomplete="off" placeholder="type a message...">
+        <button>[ SEND ]</button>
+      </form>
+      <div class="footer">Messages automatically expire after 5 minutes.</div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

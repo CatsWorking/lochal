@@ -1,0 +1,29 @@
+*{box-sizing:border-box}
+:root{font-family:"Courier New",monospace;background:#050805;color:#66ff99}
+body{margin:0;min-height:100vh;background:#050805;display:flex;align-items:center;justify-content:center;padding:16px}
+.terminal{width:min(900px,100%);height:min(760px,calc(100vh - 32px));border:1px solid #2f7d49;box-shadow:0 0 35px #102b18;display:flex;flex-direction:column;background:#030603}
+header{height:38px;border-bottom:1px solid #2f7d49;display:flex;align-items:center;justify-content:center;position:relative;color:#b8ffc9}
+.traffic{position:absolute;left:12px;display:flex;gap:6px}.traffic span{width:9px;height:9px;border:1px solid #66ff99;border-radius:50%}
+.title{font-size:13px}
+.screen{padding:22px;flex:1;display:flex;flex-direction:column;min-height:0}
+.hidden{display:none}
+.prompt{color:#b8ffc9}.prompt span{color:#66ff99}
+#login form{width:min(440px,100%);display:grid;gap:8px;margin-top:18px}
+label{color:#b8ffc9;margin-top:5px}
+small,.hint,.footer{opacity:.65;font-size:12px}
+input,button{font:inherit;border:1px solid #2f7d49;background:#020402;color:#66ff99;padding:10px}
+input:focus{outline:1px solid #66ff99;box-shadow:0 0 8px #174f2a}
+input[type=color]{height:40px;padding:3px}
+button{cursor:pointer}button:hover{background:#0a1b0e}
+.error{color:#ff7070;min-height:18px}
+.status{display:flex;gap:18px;align-items:center;border-bottom:1px dashed #245f37;padding-bottom:10px}
+#connection{color:#66ff99}.status button{margin-left:auto;padding:5px 8px;font-size:12px}
+.messages{flex:1;overflow:auto;padding:14px 0;scroll-behavior:smooth}
+.message{margin:0 0 8px;word-break:break-word}
+.time{opacity:.45;font-size:11px;margin-right:8px}
+.name{font-weight:bold}.system{opacity:.55}
+.composer{display:flex;gap:8px;border-top:1px dashed #245f37;padding-top:12px}
+.composer input{flex:1;min-width:0}
+.composer button{white-space:nowrap}
+.footer{text-align:center;padding-top:8px}
+@media(max-width:600px){.terminal{height:calc(100vh - 20px)}body{padding:10px}.screen{padding:14px}.status{font-size:12px;gap:8px}}
